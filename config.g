@@ -19,6 +19,7 @@ M586 P2 S0                              ; disable Telnet
 M569 P0.0 S0                            ; physical drive 0.0 goes forwards CHANGED from S1 to S0
 M569 P0.1 S0                            ; physical drive 0.1 goes forwards CHANGED from S1 to S0
 M569 P0.2 S0                            ; physical drive 0.2 goes forwards CHANGED from S1 to S0
+                                        ; This is due to my Z motors all going backwards with the initial config
 M569 P0.3 S1                            ; physical drive 0.3 goes forwards
 M569 P0.4 S1                            ; physical drive 0.4 goes forwards
 M569 P0.5 S1                            ; physical drive 0.5 goes forwards
@@ -42,7 +43,7 @@ M574 X1 S1 P"io0.in"                           ; configure active high endstops
 M574 Y2 S1 P"io1.in"                           ; configure active high endstops
 
 M671 X-4.5:250:504.5 Y-4.52:505:-4.52 S5       ; define positions of Z leadscrews or bed levelling screws CHANGED
-											   ; original X-4.5:150:304.5 Y-4.52:305:-4.52 S5 (coordinates are (x1:x2:x3 y1:y2:y3))
+                                               ; original X-4.5:150:304.5 Y-4.52:305:-4.52 S5 (coordinates are (x1:x2:x3 y1:y2:y3))
 M557 X20:280 Y20:280 P5                        ; define 5x5 mesh grid
 
 ; Heaters SET ME UP!!!!!!!!!!!!!!!!  <---------------------------------------------------------------------------------------------------
@@ -61,7 +62,7 @@ M950 F0 C"out4" Q500                   ; create fan 0 on pin out4 and set its fr
 M106 P0 C"Layer Fan" S0 H-1            ; set fan 0 name and value. Thermostatic control is turned off
 M950 F1 C"out7" Q500                   ; create fan 1 on pin out3 and set its frequency
                                        ; CHANGED original: M950 F1 C"out3" Q500
-									   ; NEW create fan 1 on pin out7 and set its frequency
+                                       ; NEW create fan 1 on pin out7 and set its frequency
 M106 P1 C"Hotend Fan" S0 H1 T45        ; set fan 1 name and value. Thermostatic control turned on for Hotend
 
 ; Tools
@@ -69,8 +70,8 @@ M563 P0 D0 H1 F0           ; define tool 0
 G10 P0 X0 Y0 Z0            ; set tool 0 axis offsets
 G10 P0 R0 S0               ; set initial tool 0 active and standby temperatures to 0C
 
-M950 H1 C"out2" T1         ; create nozzle heater output on out2 and map it to sensor 1 <----------- ???? Really? Is this really true?
-                           ; CHANGED C"out1" to out2
+M950 H1 C"out2" T1         ; create nozzle heater output on out2 and map it to sensor 1
+                           ; CHANGED CORRECTION C"out1" to out2
 M307 H1 B0 S1.00           ; disable bang-bang mode for heater and set PWM limit
 M143 H1 S250               ; set the maximum temperature in C for heater
 
@@ -100,4 +101,4 @@ T0
 ; M572 D0 S0.10
 
 ; PID tuning the heaters
-M501                                  ; reads in config_override.g
+M501                                  ; CHANGED ADDED LINE reads in config_override.g
