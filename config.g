@@ -41,7 +41,6 @@ M950 S0 C"io7.out"                           ; create servo pin 0 for BLTouch
 M558 P9 C"io7.in" H5 F120 T6000              ; set Z probe type to bltouch and the dive height + speeds
 ;M558 H30                                     ;*** Remove this line after delta calibration has been done and new delta parameters have been saved
 G31 P500 X-28 Y-13 Z2.89                     ; set Z probe trigger value, offset and trigger height
-M557 X15:472 Y15:487 S23.2                   ; define mesh grid
 
 ; Heaters
 M308 S0 P"temp0" Y"thermistor" T100000 B4138 ; configure sensor 0 as thermistor on pin temp0
