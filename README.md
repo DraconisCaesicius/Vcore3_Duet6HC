@@ -3,23 +3,23 @@ Setup files and step-by-step instructions.
 
 The build version 1:
 
-Duet 3 6HC
-E3D V6 hotend with PT1000 thermistor
-Bondtech LGX extruder (NOT the LGX lite, just LGX)
-EVA 2.8
-LIS3DSH accelerometer
-Completely 24V system
+Duet 3 6HC ---- 
+E3D V6 hotend with PT1000 thermistor ---- 
+Bondtech LGX extruder (NOT the LGX lite, just LGX) ---- 
+EVA 2.8 ---- 
+LIS3DSH accelerometer ---- 
+Completely 24V system ---- 
 
 The build version 2:
 
-Duet 3 6HC
-Phaetus Rapido HF hotend
-Bondtech LGX extruder (as above)
-EVA 3
-LIS3DSH accelerometer
-Mixed 12V / 24V system
-SanAce 12V 4028 layer fan
-24V hotend fan
+Duet 3 6HC ---- 
+Phaetus Rapido HF hotend ---- 
+Bondtech LGX extruder (as above) ---- 
+EVA 3 ---- 
+LIS3DSH accelerometer ---- 
+Mixed 12V / 24V system ---- 
+SanAce 12V 4028 layer fan ---- 
+24V hotend fan ---- 
 
 So, the story goes...
 
